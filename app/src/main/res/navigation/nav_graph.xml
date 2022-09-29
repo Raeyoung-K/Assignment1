@@ -17,9 +17,10 @@
         android:id="@+id/resultFragment"
         android:name="sheridan.kimrae.assignment1.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
-        <action
-            android:id="@+id/action_resultFragment_to_playFragment"
-            app:destination="@id/playFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_result" />
+    <dialog
+        android:id="@+id/aboutFragment"
+        android:name="sheridan.kimrae.assignment1.AboutFragment"
+        android:label="AboutFragment" />
+    <action android:id="@+id/action_global_aboutFragment" app:destination="@id/aboutFragment" />
 </navigation>
