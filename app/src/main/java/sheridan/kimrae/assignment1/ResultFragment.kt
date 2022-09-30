@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.toColorInt
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import sheridan.kimrae.assignment1.databinding.FragmentResultBinding
@@ -15,16 +16,6 @@ import sheridan.kimrae.assignment1.model.GameData
 import sheridan.kimrae.assignment1.model.Option
 import sheridan.kimrae.assignment1.model.Prize
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ResultFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ResultFragment : Fragment() {
 
 
@@ -60,11 +51,11 @@ class ResultFragment : Fragment() {
         when(gameData.seat) {
             // if the gameData.seat is Option.first, then Option1 should be the user's choice in the Result View.
             Option.first -> {
-                binding.ImageView1Prize.text = choiceToString(gameData.userChoice)
+                binding.ImageView1Prize.text = "${choiceToString(gameData.userChoice)}  ☜"
                 binding.ImageView2Prize.text = choiceToString(gameData.option1)
                 binding.ImageView3Prize.text = choiceToString(gameData.option2)
                 binding.ImageView4Prize.text = choiceToString(gameData.option3)
-                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}"
+                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}!"
                 binding.imageView1.setImageResource(choiceToImage(gameData.userChoice))
                 binding.imageView2.setImageResource(choiceToImage(gameData.option1))
                 binding.imageView3.setImageResource(choiceToImage(gameData.option2))
@@ -72,10 +63,10 @@ class ResultFragment : Fragment() {
             }
             Option.second -> {
                 binding.ImageView1Prize.text = choiceToString(gameData.option1)
-                binding.ImageView2Prize.text = choiceToString(gameData.userChoice)
+                binding.ImageView2Prize.text = "${choiceToString(gameData.userChoice)}  ☜"
                 binding.ImageView3Prize.text = choiceToString(gameData.option2)
                 binding.ImageView4Prize.text = choiceToString(gameData.option3)
-                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}"
+                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}!"
                 binding.imageView1.setImageResource(choiceToImage(gameData.option1))
                 binding.imageView2.setImageResource(choiceToImage(gameData.userChoice))
                 binding.imageView3.setImageResource(choiceToImage(gameData.option2))
@@ -84,9 +75,9 @@ class ResultFragment : Fragment() {
             Option.third -> {
                 binding.ImageView1Prize.text = choiceToString(gameData.option1)
                 binding.ImageView2Prize.text = choiceToString(gameData.option2)
-                binding.ImageView3Prize.text = choiceToString(gameData.userChoice)
+                binding.ImageView3Prize.text = "${choiceToString(gameData.userChoice)}  ☜"
                 binding.ImageView4Prize.text = choiceToString(gameData.option3)
-                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}"
+                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}!"
                 binding.imageView1.setImageResource(choiceToImage(gameData.option1))
                 binding.imageView2.setImageResource(choiceToImage(gameData.option2))
                 binding.imageView3.setImageResource(choiceToImage(gameData.userChoice))
@@ -96,8 +87,8 @@ class ResultFragment : Fragment() {
                 binding.ImageView1Prize.text = choiceToString(gameData.option1)
                 binding.ImageView2Prize.text = choiceToString(gameData.option2)
                 binding.ImageView3Prize.text = choiceToString(gameData.option3)
-                binding.ImageView4Prize.text = choiceToString(gameData.userChoice)
-                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}"
+                binding.ImageView4Prize.text = "${choiceToString(gameData.userChoice)}  ☜"
+                binding.resultPrize.text = "You got ${choiceToString(gameData.userChoice)}!"
                 binding.imageView1.setImageResource(choiceToImage(gameData.option1))
                 binding.imageView2.setImageResource(choiceToImage(gameData.option2))
                 binding.imageView3.setImageResource(choiceToImage(gameData.option3))

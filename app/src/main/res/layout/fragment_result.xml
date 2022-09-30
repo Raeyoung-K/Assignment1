@@ -39,9 +39,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="44dp"
         android:text="@string/option1_result"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/imageView1"
-        app:layout_constraintTop_toBottomOf="@id/textview_result"/>
+        app:layout_constraintTop_toBottomOf="@id/textview_result" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -60,9 +61,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="65dp"
         android:text="@string/option2_result"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/imageView2"
-        app:layout_constraintTop_toBottomOf="@id/ImageView1_prize"/>
+        app:layout_constraintTop_toBottomOf="@id/ImageView1_prize" />
 
 
     <ImageView
@@ -82,9 +84,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="65dp"
         android:text="@string/option3_result"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/imageView3"
-        app:layout_constraintTop_toBottomOf="@id/ImageView2_prize"/>
+        app:layout_constraintTop_toBottomOf="@id/ImageView2_prize" />
 
 
     <ImageView
@@ -104,29 +107,30 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="65dp"
         android:text="@string/option4_result"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/imageView4"
-        app:layout_constraintTop_toBottomOf="@id/ImageView3_prize"/>
+        app:layout_constraintTop_toBottomOf="@id/ImageView3_prize" />
 
     <TextView
         android:id="@+id/result_prize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/you_got_prize"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
         android:layout_marginTop="60dp"
+        android:text="@string/you_got_prize"
         android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView4"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView4" />
 
     <Button
         android:id="@+id/again_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:text="Again!"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
